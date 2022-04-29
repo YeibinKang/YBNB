@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+    <meta name="keywords" content="web design, affordable web design, professional web design">
+    <meta name="author" content="Brad Traversy">
+    <title>YBNB | Welcome</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand" href="#">YBNB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Room listing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_registration">Registration</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+
+    </header>
+
+    <section id="showcase">
+        <div class="container_roomlisting">
+
+
+
+            <div class="row">
+                <div class="col">
+                    <h3>Where do you want to stay</h3>
+                    <form method="GET" action="/search_by_location">
+                        <div>
+                            <select name="select_picker">
+                                <option value="quebec" name="Quebec">Quebec</option>
+                                <option value="toronto" name="Toronto">Toronto</option>
+                                <option value="banff" name="Banff">Banff</option>
+                                <option value="vancouver" name="Vancouver">Vancouver</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="button_1">Submit</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="row">
+        {{#each data}}
+        <div class="col">
+            <input type="hidden" name="room_id" value="{{data.id}}"></input>
+
+            <img src="{{this.photo}}" width="200px" height="200px">
+
+            <form method="get" action="/room_description/{{this.id}}">
+
+                <div class="room_info">
+                    <label class="title">{{this.title}}</label>
+                    <p class="location">in {{this.location}}</p>
+
+            </form>
+            <p class="price">{{this.price}} CAD/night</p>
+            <p class="description">{{this.description}}</p>
+            <input type="submit" value="room details" class="btn_room"></input>
+        </div>
+    </div>
+    {{/each}}
+
+    <div class="row">
+        <div class="col">
+            <img class="room_pic" src="/img/room1.jpg" width="200px" height="200px">
+            <p class="type_location">Condo | Toronto</p>
+            <p class="name">Cozy House</p>
+            <p class="price">$100 CAD/night</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img "room_pic" src="/img/room2.jpg" width="200px" height="200px">
+            <p class="type_location">Room | Toronto</p>
+            <p class="name">Vintage Place</p>
+            <p class="price">$85 CAD/night</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img class="room_pic" src="/img/room3.jpg" width="200px" height="200px">
+            <p class="type_location">Loft | Vancouver</p>
+            <p class="name">Loft with a terrace</p>
+            <p class="price">$150 CAD/night</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img class="room_pic" src="/img/room4.jpg" width="200px" height="200px">
+            <p class="type_location">House | Quebec</p>
+            <p class="name">House with FREE WIFI</p>
+            <p class="price">$125 CAD/night</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img sclass="room_pic" rc="/img/room5.jpg" width="200px" height="200px">
+            <p class="type_location">Room | Banff</p>
+            <p class="name">Mountain View Room</p>
+            <p class="price">$170 CAD/night</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <img class="room_pic" src="/img/room6.jpg" width="200px" height="200px">
+            <p class="type_location">Loft | Banff</p>
+            <p class="name">Beautiful Loft</p>
+            <p class="price">$135 CAD/night</p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    {{!-- <div class="rooms">
+        <img src="/img/room1.jpg" width="200px" height="200px">
+        <p class="type_location">Condo | Toronto</p>
+        <p class="name">Cozy House</p>
+        <p class="price">$100 CAD/night</p>
+    </div>
+
+    <div class="rooms">
+        <img src="/img/room2.jpg">
+        <p class="type_location">Room | Toronto</p>
+        <p class="name">Vintage Place</p>
+        <p class="price">$85 CAD/night</p>
+    </div>
+
+    <div class="rooms">
+        <img src="/img/room3.jpg">
+        <p class="type_location">Loft | Vancouver</p>
+        <p class="name">Loft with a terrace</p>
+        <p class="price">$150 CAD/night</p>
+    </div>
+
+    <div class="rooms">
+        <img src="/img/room4.jpg">
+        <p class="type_location">House | Quebec</p>
+        <p class="name">House with FREE WIFI</p>
+        <p class="price">$125 CAD/night</p>
+    </div>
+
+    <div class="rooms">
+        <img src="/img/room5.jpg">
+        <p class="type_location">Room | Banff</p>
+        <p class="name">Mountain View Room</p>
+        <p class="price">$170 CAD/night</p>
+    </div>
+
+    <div class="rooms">
+        <img src="/img/room6.jpg">
+        <p class="type_location">Loft | Banff</p>
+        <p class="name">Beautiful Loft</p>
+        <p class="price">$135 CAD/night</p>
+    </div>
+
+
+    </div> --}}
+
+
+
+
+
+
+
+    <footer>
+        <ul>
+            <li>YBNB, Copyright &copy; 2020</li>
+            <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+            <li>Instagram: <a href="">@YBNB</a></li>
+            <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+        </ul>
+        <p></p>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</body>
+
+</html>

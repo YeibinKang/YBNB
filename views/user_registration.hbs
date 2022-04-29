@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Brad Traversy">
+  <title>YBNB | Welcome</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+      <a class="navbar-brand" href="">YBNB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/room_listing">Room listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registration</a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+
+  <div id="registeration">
+  
+    {{#if errorMessage}}
+    <h1 class="errorMessage">{{errorMessage}}</h1>
+    {{/if}}
+  
+    <form action="register" method="POST">
+      <div class="regi_info">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="First name"><br></br>
+      </div>
+      <br/>
+      <div class="regi_info">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lname" placeholder="Last name"><br></br>
+      </div>
+
+      <div class="regi_info">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email address"><br></br>
+        </div>
+
+        <div class="regi_info">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password"><br></br>
+        </div>
+
+        <div class="regi_info">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+        </div>
+
+        <button class="button_1">Sign up</button>
+    </form>
+  </div>
+
+
+
+  {{!-- <section id="promotion">
+    <div class="container">
+      <h1>Invite your friend</h1>
+      <h1>GET 15% OFF</h1>
+      <form>
+        <input type="email" placeholder="Enter Email..." required>
+        <button type="submit" class="button_1">Invite!</button>
+      </form>
+    </div>
+  </section> --}}
+
+
+  <footer>
+    <ul>
+      <li>YBNB, Copyright &copy; 2020</li>
+      <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+      <li>Instagram: <a href="">@YBNB</a></li>
+      <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+    </ul>
+    <p></p>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</body>
+
+</html>

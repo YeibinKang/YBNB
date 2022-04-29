@@ -1,0 +1,837 @@
+body {
+    font: 15px/1.5 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #faf5e4;
+}
+
+/* Global */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    height: 38px;
+    background: #2c786c;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dark {
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Header **/
+
+
+
+
+
+header{
+    max-height: max-content;
+}
+
+div .container{
+    max-height: max-content;
+}
+
+header .container{
+    background: #ffffff;
+    color: #faf5e4;
+    border-bottom: #faf5e4 5px solid;
+    width: 100%;
+    height: 200px;
+}
+
+
+
+header a {
+    color: #666;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    /* padding: 0 20px 0 20px; */
+}
+
+header #branding {
+    margin-top: 10px;
+    margin-right: 100px;
+    float: left;
+}
+
+header #branding h1 {
+    margin: 15px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav ul {
+    font-size: 100pt;
+}
+
+header .highlight,
+header .current a {
+    color: #f8b400;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+
+
+
+#login .container_login {
+    width: 50%;
+    height: 50%;
+}
+
+/* Bordered form */
+#login .container_login form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+#login input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#login button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Add padding to containers */
+#login .container_login {
+    padding: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+/* style the container */
+.login {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px 0 30px 0;
+    text-align: center;
+}
+
+/* style inputs and link buttons */
+.login input,
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    /* remove underline from anchors */
+}
+
+.btn1 {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #38556a;
+    color: #f2f2f2;
+    /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row h1{
+    color: #f1f1f1;
+    text-decoration: underline wavy;
+}
+
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+    display: none;
+}
+
+/* bottom container */
+.login {
+    text-align: center;
+    background-color: #666;
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+    .col {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Showcase */
+#showcase {
+    min-height: 400px;
+    text-align: center;
+    color: #35424a;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase .container {
+    /* background-image: url('../img/home_hotel1.jpg'); */
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 800px;
+    width:1215px; */
+    /* width: 100%;
+    height: 100%; */
+}
+
+#showcase div.container{
+    position:static;
+    height:100%;
+    width: 100%;
+}
+
+
+#showcase .container_welcome {
+    background-image: url('../img/welcome.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* margin-top:0px; */
+    height: 800px;
+    opacity: 0.9;
+}
+
+#showcase .container_welcome h1,
+h3 {
+    /* padding-top: 100px;
+    margin: 20%;
+    color: black;
+    font-weight: bold;*/
+    font-weight: bold;
+    color: black;
+    margin-top:0px;
+} 
+
+#showcase .container_error {
+    background-image: url('../img/error.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+    opacity: 0.9;
+}
+
+#showcase .container_error h1,
+h2,
+h3 {
+    padding-top: 100px;
+    color: black;
+    font-weight: bold;
+
+}
+
+#app_info #admin_container{
+    background-image: url('../img/admin.jpg');
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 600px;
+}
+
+#app_info #admin_container h1{
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/* showcase in roomlisting page */
+#showcase .container_roomlisting h1{
+    margin-top:0px;
+}
+
+#showcase .container_roomlisting .location_info{
+    background-image: url('../img/house.jpg');
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+    opacity: 0.8;
+    color:#f1f1f1;
+}
+
+.container_roomlisting .location_info h1, label{
+    color:rgb(29, 27, 27);
+    font-size: x-large;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+div.row{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+div.room_info{
+    text-align: center;
+}
+
+/* grid */
+
+
+body .grid {
+    /* text-align: center; */
+    padding: 2% auto;
+    /* width: 85%;
+    height: 85%; */
+    margin-top: 2%;
+    display: block;
+}
+
+body .grid>div {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    font-size: 20px;
+}
+
+body .grid .rooms img {
+
+    width: 100%;
+    height: 100%;
+    padding: 10% 10% 5% 10%;
+}
+
+.grid .rooms .room_info .title{
+    
+    color:#323232;
+    font-size: 170%;
+}
+
+body .grid .rooms .room_info .price{
+    /* padding: 10% 15% 5% 15%; */
+    text-align: center;
+    margin: 0px;
+    color:crimson;
+    font-size: 130%;
+}
+
+body .grid .rooms .room_info .description{
+    
+    margin: 5px 0px 0px 0px;
+    font-size: 100%;
+}
+
+body .grid .rooms .room_info .location{
+    margin-top: 0px;
+    display: inline;
+    text-align: center;
+    color:#323232;
+    font-size: 110%;
+}
+
+
+.room_info .btn_room {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #2c786c;
+    color: #f2f2f2;
+    /* remove underline from anchors */
+}
+
+
+
+
+/* Reserrvation information */
+
+#reservation_info {
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px;
+    color: #faf5e4;
+
+}
+
+
+
+#reservation_info .checkIn_info,
+.checkOut_info,
+.location_info,
+.guest_info {
+    display: inline-block;
+    width: 20%;
+    height: 15%;
+    padding: 5px;
+    vertical-align: top;
+    background-color: #aaa;
+    opacity: 0.9;
+}
+
+#reservation_info .guest_info div input{
+    width: 25%;
+}
+
+@media (max-width: 1200px) {
+
+    #reservation_info .checkIn_info,
+    .checkOut_info,
+    .location_info,
+    .guest_info {
+        display: block;
+        width: auto;
+    }
+}
+
+
+#reservation_info label,
+select {
+    font-size: 15pt;
+    font: bold;
+}
+
+#reservation_info input {
+    font-size: 15pt;
+}
+
+#reservation_info form {
+    padding-top: 20px;
+}
+
+
+/* 
+  app_information */
+
+#app_info .info_container {
+    size: 200px;
+    padding: 0px 130px;
+}
+
+#app_info .info_container #home_detail{
+    /* width: 100%; */
+    /* margin: 2% auto 2% auto; */
+    margin: 10px auto;
+    display: flex;
+    /* height: 50%;
+    width: 50%; */
+}
+
+#app_info .info_container #home_detail .home_img{
+    display: inline-block;
+    opacity: 1;
+    margin: 2% auto 2% auto;
+    width: 400px;
+}
+
+#app_info .info_container #home_detail .home_img img{
+    width: 400px;
+    height: 400px;
+    padding: 0px 10px 0px 10px;
+    /* display: inline-block; */
+}
+
+#app_info .info_container #home_detail .home_img .home_p3, p{
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-top:0px;
+    display: block;
+    text-align: center;
+    /* margin-top: */
+}
+
+.home_p3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top:0px;
+}
+
+#home_detail p{
+    font-size: large;
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+#app_info #info {
+    color: #2c786c;
+}
+
+#app_info #special #home_detail a {
+
+    color: #e25822;
+    font-weight: bold;
+    font-size: 30pt;
+
+}
+
+
+#app_info .info_container img {
+    padding-top: 2%;
+    display: inline-block;
+    width: 20%;
+    height: 300px;
+    padding: 30pt;
+}
+
+#app_info .info_container td{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+#app_info .info_container .desc{
+    color: #e25822;
+}
+
+#app_info video{
+    margin-top: 10px;
+    /* width: 1215px;
+    background-position: center; */
+    display: block;
+    margin: 10px auto;
+    padding-top: 2%;
+    width: 50%;
+    height: 50%;
+}
+
+
+/* registeration */
+
+
+
+#registeration form {
+    border-radius: 5px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    color: #faf5e4;
+    background-color: #004445;
+    display: block;
+}
+
+#registeration .regi_info {
+    margin: 5px;  
+    padding: 0px;
+}
+
+#registeration .regi_info label {
+    width: 250px;
+    font-size: 20pt;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: inline-block;
+    color: #faf5e4;
+}
+
+#registeration .regi_info input {
+    width: 30%;
+    background-color: #faf5e4;
+    color: rgb(29, 27, 27);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    size: 10;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#registeration .errorMessage{
+    text-align: center;
+    color: red;
+}
+
+
+
+/* 
+promotion */
+
+#promotion {
+    font: bold;
+    background-color: #f8b400;
+    width: 15%;
+    height: 25%;
+    position: fixed;
+
+    padding: 5px;
+    padding-left: 10px;
+
+    z-index: 100;
+    top: 50%;
+    right: 10px;
+    opacity: 1;
+
+}
+
+
+
+#login form {
+    font: bold;
+    background-color: #004445;
+    color: #faf5e4;
+    opacity: 1;
+    text-align: center;
+    width: 10%;
+    height: 27%;
+    position: sticky;
+}
+
+
+#login form,
+#promotion form {
+    color: balck;
+}
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#boxes .box img {
+    width: 90px;
+}
+
+/* Sidebar */
+aside#sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+/* Services */
+ul#services li {
+    list-style: none;
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+footer {
+    padding: 20px;
+    margin-top:1%;
+    color: #faf5e4;
+    background-color: #004445;
+    text-align: center;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #faf5e4;
+}
+
+footer li {
+    display: inline;
+    padding: 10px;
+    font: #faf5e4;
+    text-decoration: none;
+}
+
+footer li a {
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+
+    header #branding,
+    header nav,
+    header nav li,
+    #promotion h1,
+    #promotion form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px;
+    }
+
+    #promotion button,
+    .quote button {
+        display: block;
+        width: 100%;
+    }
+
+    #promotion form input[type="email"],
+    .quote input,
+    .quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}

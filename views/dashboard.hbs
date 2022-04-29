@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Affordable and professional web design">
+  <meta name="keywords" content="web design, affordable web design, professional web design">
+  <meta name="author" content="Brad Traversy">
+  <title>YBNB | Welcome</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <img src="/img/logo2.png" alt="logo" height="200px" width="200px">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/room_listing">Rooms</a></li>
+          <li><a href="/user_registration">Registration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="container_welcome">
+  
+      {{#if data}}
+      <h1>Welcome! {{data.fname}}</h1>
+      <h1>Enjoy a journey with us!</h1>
+      <h1>Let's start a fantastic jorney</h1>
+      {{/if}}
+  
+  
+      <a href="/logout">Logout</a>
+      
+  
+    </div>
+  </section>
+
+  <section id="app_info">
+    <div class="info_container">
+      <h1>Our priority is how you're feeling.</h1>
+      <h3>We offer best rooms in CANADA. Our hosts are warm-hearted and verified</h3>
+      <div class="photo_container">
+
+        <img src="img/toronto.jpg" alt="toronto">
+        <img src="img/banff.jpg" alt="banff">
+        <img src="img/quebec.jpg" alt="quebec">
+        <img src="img/vancouver.jpg" alt="vancouver">
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <footer>
+    <ul>
+      <li>YBNB, Copyright &copy; 2020</li>
+      <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+      <li>Instagram: <a href="">@YBNB</a></li>
+      <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+    </ul>
+    <p></p>
+  </footer>
+</body>
+
+</html>

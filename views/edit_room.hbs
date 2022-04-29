@@ -1,0 +1,115 @@
+room title --> change the room information for
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>YBNB | Welcome</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <img src="/img/logo2.png" alt="logo" height="200px" width="200px">
+
+
+
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="#">Home</a></li>
+          <li><a href="/room_listing">Rooms</a></li>
+          <li><a href="/edit">Edit details</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  <section id="app_info">
+
+    <div class="info_container">
+
+
+      <h1 id="special"><a href="#">Edit room details</a></h1>
+      {{#if errorMsg}}
+        <h5>{{errorMsg}}</h5>
+      {{else}}
+        <h5>Write down a room information</h5>
+      {{/if}}
+      <br>
+      <form action="/edit_room/{{data.id}}" method="post" enctype="multipart/form-data">
+        <table style="border: 1px dashed #cdcdcd;padding:6px;">
+          <tbody>
+          
+            <tr>
+              <td>
+                <label for="title">Room title:</label>
+                <input style="width:100%" id="title" type="text" name="title" value="{{data.title}}" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="price">Price:</label>
+                <input style="width:100%" id="price" type="number" name="price" value="{{data.price}}" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="description">Description</label>
+              <textarea width="100%" height="100%" id="description" name="description" />{{data.description}}</textarea>
+              </td>
+            </tr>
+
+            <tr>
+               <td><label for="location">Location:</label>
+                <select name="location" id="location">
+                  <option type="text" value="toronto" {{#is data.location "toronto"}} selected {{/is}}  >Toronto</option>
+                  <option type="text" value="vancouver" {{#is data.location "vancouver"}} selected {{/is}}>Vancouver</option>
+                  <option type="text" value="banff" {{#is data.location "banff"}} selected {{/is}}>Banff</option>
+                  <option type="text" value="quebec" {{#is data.location "quebec"}} selected {{/is}}>Quebec</option>
+                </select>
+              </td>
+            </tr>
+            
+
+            <tr>
+              <td><label for="photo">Room photo</label>
+              <img src="{{data.photo}}">
+              <input id="photo" type="file" name="photo"  /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <br>
+      <form action="/edit_room" method="post" enctype="multipart/form-data">
+       
+        <input type="submit" value="Edit">
+      </form>
+      
+      <button class="button_1"><a href="/logout">Logout</a></button>
+
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li>YBNB, Copyright &copy; 2020</li>
+      <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+      <li>Instagram: <a href="">@YBNB</a></li>
+      <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+    </ul>
+    <p></p>
+  </footer>
+</body>
+
+</html>

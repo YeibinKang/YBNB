@@ -1,0 +1,85 @@
+
+hould have been in the same page instead of redirecting you to a different page
+
+
+
+
+Assignment3
+- already exist email ---> 
+(node:13524) UnhandledPromiseRejectionWarning: TypeError: Class constructor UniqueConstraintError cannot be invoked without 'new'
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)                                                                                                  r by rejecting a promise 
+(node:13524) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, ojs.org/api/cli.html#cihanr by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)    
+
+
+- login -> password/id check (not email)
+
+- unsuccesful -> warning message (login)
+- dashboardr shows name (first/last)  - app.post(login) ---> dashboard에 이름이 안 뜸...
+- dashbaord_admin button color changes
+- register 성공 후 ,이름 프린트
+- 비밀번호 encrypted
+
+
+Assignment4
+- room_listing.hbs에서 사진은 어떻게 가져오지? (사진 같이 업로드 하는 법)
+- create a View --> created list section (0)
+- 'edit' detail section ????? --> edit할 title이 계속 undefined
+- location search -> room list page (search by location handlebars, app.get/app.post)
+- room listing 에서 edit 버튼 눌렀을 때에 누른 방의 정보들이 admin_edit_room 화면에 미리 띄워져있고, 그걸 수정할 수 있도록 한다.
+  - room listing에서 edit 버튼을 눌렀을 때 ----> action post를 한 후에 roomInformation.findAndCountAll
+  - 정보를 찾고, data를 같이 render한다.
+  - rener 한 페이지 (admin_edit_room 에서는 {{data..}}를 해서 방 정보를 띄운다)
+
+Assignment5
+- room img -> connect with room description page
+- total price : alculate days * room price
+
+- login 한 회원이 room_description을 볼 수 있도록
+
+
+
+
+
+
+
+
+
+
+// use sample "user" (declared above)
+  if (username === admin.email && password === admin.password) {
+
+    // Add the user on the session and redirect them to the dashboard page.
+    req.session.admin = {
+      username: admin.username,
+      email: admin.email,
+      isAdmin: true
+    };
+
+    res.render("dashboard_admin", {
+      data: admin,
+      layout: false
+    });
+  }else if((username != admin.email)&&(username != "")&&(password !="")) {
+    
+    userInformation.findAll({
+      attributes: ['email', 'password','fname'], 
+      where: {email:req.body.username}
+    }).then(function (data) {
+    
+      console.log(data.username);
+      return res.render("dashboard", {
+       data: JSON.parse(JSON.stringify(data)),
+        layout: false
+      });
+    });
+  }else if(username ==="" || password ==="") {
+    // render 'invalid username or password'
+    res.render("home", {
+      //yb: regular user dashboard move!
+      errorMsg: "invalid username or password!",
+      layout: false
+    });
+    //dd
+    //res.redirect("/dashboard");
+  }
+});

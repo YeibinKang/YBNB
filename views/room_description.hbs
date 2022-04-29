@@ -1,0 +1,105 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>YBNB | Welcome</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+  
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+      <a class="navbar-brand" href="#">YBNB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Room listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_registration">Registration</a>
+          </li>
+  
+        </ul>
+      </div>
+    </nav>
+  
+  </header>
+
+  <section id="app_info">
+  
+    <div class="regi_info">
+  
+      <form id="book_form" method="get" action="/booking_date">
+      <input type="hidden" name="room_id" value="{{data.id}}"></input>
+
+
+      <div class="row">
+        <div class="col">
+          <h3>Room information</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h4>Room title: {{data.title}}</h4>
+          <h4>Location: {{data.location}}</h4>
+          <h4>Room description: {{data.description}}</h4>
+          <h4>Price per night: CAD {{data.price}}</h4>
+          <div class="row">
+            <h4>Check-in</h4>
+            <input type="date" name="check_in" value="{{check_in}}"/>
+            <h4>Check-out</h4>
+            <input type="date" name="check_out" value="{{check_out}}"/>
+          </div>
+          <h4>Total price: CAD {{total_price}}</h4>
+          <input type="submit" name="total_price" value="see total price">
+          <button {{#ifnot total_price}}disabled{{/ifnot}}
+              id="book_button" type="submit" class="btn1">Book this room</button>
+              <script>
+                document.querySelector("#book_button").addEventListener("click", function(evt) {
+                  var form = document.querySelector("#book_form");
+                  form.method = "POST"
+                  alert("Success!");
+                  form.submit();
+                });
+              </script>
+        </div>
+      </div>
+
+  
+    </div>
+  </section>
+
+  
+  <footer>
+    <ul>
+      <li>YBNB, Copyright &copy; 2020</li>
+      <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+      <li>Instagram: <a href="">@YBNB</a></li>
+      <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+    </ul>
+    <p></p>
+  </footer>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</body>
+
+</html>

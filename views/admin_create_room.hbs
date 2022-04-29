@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>YBNB | Welcome</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <img src="/img/logo2.png" alt="logo" height="200px" width="200px">
+
+
+
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="#">Home</a></li>
+          <li><a href="/room_listing">Rooms</a></li>
+          <li><a href="/edit_room">Edit details</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  <section id="app_info">
+
+    <div class="info_container">
+
+
+      <h1 id="special"><a href="#">Add a new room</a></h1>
+      {{#if errorMsg.visible}}
+        <h5>{{errorMsg}}</h5>
+      {{else}}
+        <h5>Write down a room information</h5>
+      {{/if}}
+      <br>
+      <form action="/admin_create_room" method="post" enctype="multipart/form-data">
+        <table style="border: 1px dashed #cdcdcd;padding:6px;">
+          <tbody>
+
+            <tr>
+              <td>
+                <label for="title">Room title:</label>
+                <input style="width:100%" id="title" type="text" name="title" placeholder="A room title" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="price">Price:</label>
+                <input style="width:100%" id="price" type="number" name="price" placeholder="price" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="description">Description</label>
+              <textarea width="100%" height="100%" id="description" name="description" /></textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="location">Location:</label>
+                <select name="location" id="location">
+                  <option type="text" value="toronto">Toronto</option>
+                  <option type="text" value="vancouver">Vancouver</option>
+                  <option type="text" value="banff">Banff</option>
+                  <option type="text" value="quebec">Quebec</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="phto">Room photo</label>
+              <input id="photo" type="file" name="photo" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit">Submit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <br>
+      <button class="button_1"><a href="/logout">Logout</a></button>
+      <button class="button_1"><a href="/admin_create_room">Create a room</a></button>
+
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li>YBNB, Copyright &copy; 2020</li>
+      <li>Email: <a href="mailto:yeibinkang@gmail.com">yeibinkang@gmail.com</a></li>
+      <li>Instagram: <a href="">@YBNB</a></li>
+      <li>Address: 1750 Finch Ave. East Toronto, Ont. M2J 2X5</li>
+    </ul>
+    <p></p>
+  </footer>
+</body>
+
+</html>
